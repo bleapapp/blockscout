@@ -1,3 +1,8 @@
+## Bleap Setup
+1. `cd docker-compose`
+2. `docker-compose -f geth.yml up`
+3. UI available on http://127.0.0.1
+
 <h1 align="center">Blockscout</h1>
 <p align="center">Blockchain Explorer for inspecting and analyzing EVM Chains.</p>
 <div align="center">

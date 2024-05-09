@@ -85,3 +85,10 @@ services:
     extends:
       file: ./services/nginx.yml
       service: proxy
+
+  sc-verifier:
+    extends:
+      file: ./services/smart-contract-verifier.yml
+      service: smart-contract-verifier
+    ports:
+      - 8082:8050
