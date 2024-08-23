@@ -3,7 +3,8 @@ version: '3.9'
 services:
   # Pimlico Infra (Node + Paymaster + Bundler)
   anvil:
-    image: ghcr.io/foundry-rs/foundry:nightly-f6208d8db68f9acbe4ff8cd76958309efb61ea0b
+    image: ghcr.io/foundry-rs/foundry:nightly-0dceb536da7129c8e58b2c30c7059e247467838f
+
     ports: [ "8545:8545" ]
     entrypoint: [ "anvil", "--host", "0.0.0.0" ]
     platform: linux/amd64/v8
@@ -20,6 +21,7 @@ services:
     ports: [ "4337:4337" ]
     environment:
       - ANVIL_RPC=http://anvil:8545
+      - ALTO_BALANCE_OVERRIDE=false
 
   # Blockscout Infra
   redis-db:
@@ -82,7 +84,7 @@ services:
       service: frontend
     environment:
       NEXT_PUBLIC_NETWORK_ID: '31337'
-      NEXT_PUBLIC_NETWORK_RPC_URL: http://host.docker.internal:8545/
+      NEXT_PUBLIC_NETWORK_RPC_URL: http://localhost:8545/
 
   stats-db-init:
     extends:
