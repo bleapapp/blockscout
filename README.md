@@ -1,6 +1,6 @@
 ## Bleap Setup
 1. `cd docker-compose`
-2. `docker-compose -f anvil-network.yml up`
+2. `docker compose -f anvil-network.yml up`
 3. UI available on http://127.0.0.1
 
 <h1 align="center">Blockscout</h1>
