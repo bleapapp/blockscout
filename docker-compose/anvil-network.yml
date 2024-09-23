@@ -3,8 +3,7 @@ version: '3.9'
 services:
   # Pimlico Infra (Node + Paymaster + Bundler)
   anvil:
-    image: ghcr.io/foundry-rs/foundry:nightly-0dceb536da7129c8e58b2c30c7059e247467838f
-
+    image: ghcr.io/foundry-rs/foundry:master
     ports: [ "8545:8545" ]
     entrypoint: [ "anvil", "--host", "0.0.0.0" ]
     platform: linux/amd64/v8
